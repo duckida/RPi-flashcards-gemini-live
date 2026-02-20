@@ -62,7 +62,7 @@ def snap():
     led.on()
     print("Taking photo...")
     os.system(
-        "libcamera-still --width 1536 --height 1024 -o /home/pi/flashcards/temp/card.jpg -n"
+        "rpicam-still --width 1536 --height 1024 -o /home/pi/flashcards/temp/card.jpg -n"
     )
     print("Photo taken!")
     led.off()
