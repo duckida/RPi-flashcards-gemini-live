@@ -146,7 +146,7 @@ class AudioLoop:
                 # Upsample 24kHz → 48kHz (multiply by 2)
                 audio_24k = np.frombuffer(bytestream, dtype=DTYPE).astype(np.float32)
                 audio_48k = signal.resample_poly(audio_24k, 2, 1).astype(DTYPE)
-                audio_48k = (audio_48k * 0.1x).astype(DTYPE)  # 10% volume
+                audio_48k = (audio_48k * 0.1).astype(DTYPE)  # 10% volume
                 await asyncio.to_thread(stream.write, audio_48k)
 
                 if self.audio_in_queue.empty():
