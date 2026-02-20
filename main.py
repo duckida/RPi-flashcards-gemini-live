@@ -55,7 +55,7 @@ def snap():
     print("Taking photo...")
     os.makedirs("/home/pi/flashcards/temp", exist_ok=True)
     os.system(
-        "rpicam-still --width 1536 --height 1024 -o /home/pi/flashcards/temp/card.jpg -n --zsl"
+        "rpicam-still --width 2592 --height 1944 -o /home/pi/flashcards/temp/card.jpg -n --zsl"
     )
     print("Photo taken!")
     led.off()
@@ -212,3 +212,4 @@ if __name__ == "__main__":
         asyncio.run(main.run())
     except KeyboardInterrupt:
         print("\nExiting...")
+
